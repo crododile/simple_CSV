@@ -17,4 +17,9 @@ $(function(){
     SimpleCSV.revise_header(dragged_data, past_text)
   });
   
+  $('#submit-simple-csv').on('click', function(e){
+    e.preventDefault();
+    SimpleCSV.submit($(e.target).data()['url'], 'POST');
+  })
+  
 })
