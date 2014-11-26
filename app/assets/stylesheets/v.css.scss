@@ -1,0 +1,44 @@
+// Place all the styles related to the v controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.pd-container{
+  .patient-data{
+    display: inline;
+  }
+}
+
+#valid_columns_bank{
+  p.permitted-col{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: teal;
+    -webkit-box-shadow: 0px 0px 5px 1px #888888;
+    box-shadow: 0px 0px 5px 1px #888888;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+    &:active{
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+      cursor: grabbing;
+    }
+  }
+}
+
+table#receiver{
+  td, th {
+    border: 1px solid green;
+  }
+
+  th {
+    background-color: red;
+    color: white;
+  }
+  
+  th.valid{
+    background-color: green;
+  }
+}
