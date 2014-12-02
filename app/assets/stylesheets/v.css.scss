@@ -2,9 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .pd-container{
-  .patient-data{
+  .csv-data{
     display: inline;
   }
 }
@@ -26,6 +25,24 @@
       cursor: grabbing;
     }
   }
+  
+  p.collection-col{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: blue;
+    -webkit-box-shadow: 0px 0px 5px 1px #888888;
+    box-shadow: 0px 0px 5px 1px #888888;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+    &:active{
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+      cursor: grabbing;
+    }
+  }
+  
 }
 
 table#receiver{

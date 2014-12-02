@@ -6,6 +6,21 @@ $(function(){
       $('.permitted-col').each(function(i, node){
         pc.push($(node).text())
       })
+      //will add collection columns when they are dragged in
+    },
+    
+    inc_collection_counter: function(col_name){
+      this["_"+col_name+"_count"] = this["_"+col_name+"_count"] || 0
+      this["_"+col_name+"_count"]++
+    },
+    
+    inc_and_get_collection_counter: function(col_name){
+      this.inc_collection_counter(col_name);
+      return this.get_collection_counter(col_name);
+    },
+    
+    get_collection_counter: function(col_name){
+      return this["_"+col_name+"_count"] = this["_"+col_name+"_count"] || 0
     },
   
     valid_columns: function(){
@@ -22,7 +37,8 @@ $(function(){
     
     revise_header: function(new_header, old_header){
       this.dobj().forEach( function(o){
-        o[new_header] = o[old_header]
+        o[new_header] = o[old_header];
+        delete o[old_header];
       })
     },
     

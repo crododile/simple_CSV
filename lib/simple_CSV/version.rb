@@ -1,3 +1,3 @@
 module SimpleCSV
-  VERSION = "0.0.7"
+  VERSION = "0.0.23"
 end

@@ -6,7 +6,7 @@ $(function(){
       .data( Object.keys(d) )
       .enter()
       .append('td')
-      .attr('id', function(dt, ix){'patient-data-' + d + ix })
+      .attr('id', function(dt, ix){'csv-data-' + d + ix })
       .text(function(dt, ix){
         return d[dt];
       })
@@ -37,7 +37,7 @@ $(function(){
       rcv.selectAll('tr').data(dobj)
         .enter()
         .append('tr')
-        .attr('id', function(d,i){ return "patient-"+ i })
+        .attr('id', function(d,i){ return "csv-"+ i })
        rcv.selectAll('tr').data(dobj)
          .each( dataToTable )
     }
