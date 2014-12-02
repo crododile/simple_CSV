@@ -45,5 +45,5 @@ $(function(){
     reader.readAsText(files[0])
   }
 
-  $('#files').on('change', handleFileSelect);
+  $('#file-selector-simple-csv').on('change', handleFileSelect);
 });

@@ -1,61 +1,65 @@
 // Place all the styles related to the v controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.pd-container{
-  .csv-data{
-    display: inline;
-  }
-}
-
-#valid_columns_bank{
-  p.permitted-col{
+div#simple-csv-container{
+  #submit-simple-csv{
     display: inline-block;
-    margin: 5px;
-    padding: 5px;
-    background-color: teal;
-    -webkit-box-shadow: 0px 0px 5px 1px #888888;
-    box-shadow: 0px 0px 5px 1px #888888;
-    cursor: -webkit-grab;
-    cursor: -moz-grab;
-    cursor: grab;
-    &:active{
-      cursor: -webkit-grabbing;
-      cursor: -moz-grabbing;
-      cursor: grabbing;
+  }
+
+  #file-selector-simple-csv{
+    display: inline-block;    
+  }
+
+  .pd-container{
+    .csv-data{
+      display: inline;
     }
   }
-  
-  p.collection-col{
-    display: inline-block;
-    margin: 5px;
-    padding: 5px;
-    background-color: blue;
-    -webkit-box-shadow: 0px 0px 5px 1px #888888;
-    box-shadow: 0px 0px 5px 1px #888888;
-    cursor: -webkit-grab;
-    cursor: -moz-grab;
-    cursor: grab;
-    &:active{
-      cursor: -webkit-grabbing;
-      cursor: -moz-grabbing;
-      cursor: grabbing;
+
+  #valid_columns_bank{
+    p.permitted-col{
+      display: inline-block;
+      margin: 5px;
+      padding: 5px;
+      background-color: #1abc9c;
+      cursor: -webkit-grab;
+      cursor: -moz-grab;
+      cursor: grab;
+      &:active{
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+        cursor: grabbing;
+      }
     }
-  }
-  
-}
 
-table#receiver{
-  td, th {
-    border: 1px solid green;
+    p.collection-col{
+      display: inline-block;
+      margin: 5px;
+      padding: 5px;
+      background-color: #3498db;
+      cursor: -webkit-grab;
+      cursor: -moz-grab;
+      cursor: grab;
+      &:active{
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+        cursor: grabbing;
+      }
+    }  
   }
 
-  th {
-    background-color: red;
-    color: white;
-  }
-  
-  th.valid{
-    background-color: green;
+  table#receiver{
+    td, th {
+      border: 1px solid #2c3e50;
+    }
+
+    th {
+      background-color: #c0392b;
+      color: white;
+    }
+
+    th.valid{
+      background-color: #2ecc71;
+    }
   }
 }
