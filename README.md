@@ -1,6 +1,5 @@
-
-This gem exists to ease the pain of spreadsheet imports to your Rails DB
-from sources that may have different naming conventions than your Rails App.
+This gem exists to ease the pain of spreadsheet imports to your DB
+from sources that may have different naming conventions than your App.
 
 ##Simple Usage
 Include simple_CSV javascripts ( sort of the heart of the gem ) in the asset pipeline with

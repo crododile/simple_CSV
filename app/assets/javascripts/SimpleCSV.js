@@ -53,6 +53,11 @@ $(function(){
       })
     },
     
+    reject_invalid_columns: function(){
+      this.dobj().forEach(function(o){
+      })
+    },
+    
     //maybe clean data before submitting by removing unusable columns
     delete_column: function(column_header) {
       this.dobj().forEach( function(o){
