@@ -1,4 +1,3 @@
-# SimpleCSV
 
 This gem exists to ease the pain of spreadsheet imports to your Rails DB
 from sources that may have different naming conventions than your Rails App.
@@ -54,3 +53,4 @@ Adding the ability to parse excel files would be pretty amazing.
 Add this line to your application's Gemfile:
 
 gem 'simple_CSV', github: "..."
+
