@@ -30,7 +30,7 @@ params as simpleCSVdata. Access through
 ##( Slightly ) Advanced Usage
 If your data contains associated records, the helper takes a third argument
 <code>
-<%= simple_csv_for(import_posts_url, ['first_name', 'last_name'], ['pets', 'fish'])%>
+<%= simple_csv_for(import_people_url, ['first_name', 'last_name'], ['pets', 'fish'])%>
 </code>
 
 Pets and fish will generate draggable material that will update headers with an ever
