@@ -51,5 +51,5 @@ Adding the ability to parse excel files would be pretty amazing.
 
 Add this line to your application's Gemfile:
 
-gem 'simple_CSV', github: "..."
+gem 'simple_CSV', github: "metova/simple_CSV"
 
