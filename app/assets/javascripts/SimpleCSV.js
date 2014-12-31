@@ -59,7 +59,7 @@ $(function(){
     },
     
     submit: function(url, action){
-      var data = { simpleCSVdata: reject_invalid_columsn(this.dobj()) }
+      var data = { simpleCSVdata: reject_invalid_columns(this.dobj()) }
       $.ajax({
         type: action,
         url: url,
