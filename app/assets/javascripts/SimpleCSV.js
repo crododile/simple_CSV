@@ -9,6 +9,10 @@ $(function(){
       //will add collection columns when they are dragged in
     },
     
+    add_valid_column: function(header){
+      this.valid_columns().push(header)
+    },
+    
     inc_collection_counter: function(col_name){
       this["_"+col_name+"_count"] = this["_"+col_name+"_count"] || 0
       this["_"+col_name+"_count"]++
@@ -40,10 +44,22 @@ $(function(){
         o[new_header] = o[old_header];
         delete o[old_header];
       })
+      this.add_valid_column(new_header)
+    },
+    
+    matching_subset: function(obj, props) {
+        var ret = {};
+        for(var i = 0, l = props.length; i < l; i++) {
+            var prop = props[i];
+            if(obj.hasOwnProperty(prop)) {
+                ret[prop] = obj[prop];
+            }
+        }
+        return ret;
     },
     
     submit: function(url, action){
-      var data = { simpleCSVdata: this.dobj() }
+      var data = { simpleCSVdata: reject_invalid_columsn(this.dobj()) }
       $.ajax({
         type: action,
         url: url,
@@ -54,8 +70,13 @@ $(function(){
     },
     
     reject_invalid_columns: function(){
+      //this is run when creating json for submitting
+      var valid_group = []
+      var vcols = this.valid_columns();
       this.dobj().forEach(function(o){
+        valid_group.push(SimpleCSV.matching_subset(o, vcols))
       })
+      return valid_group
     },
     
     //maybe clean data before submitting by removing unusable columns

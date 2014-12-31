@@ -75,8 +75,15 @@ describe("SimpleCSV", function() {
         }]
     )
   })
-  it("rejects invalid columns ( currently responsibility of rails strong params)",
-     function(){})
+  it("rejects invalid columns ( this is run before submitting ajax request )",
+     function(){
+        SimpleCSV.set_dobj(testDobj);
+        SimpleCSV.set_valid_columns();
+        SimpleCSV.revise_header('first_name', 'fname');
+        expect(SimpleCSV.reject_invalid_columns()).toEqual(
+          [{ first_name: 'bill'}, { first_name: 'test'}]
+        )
+     })
   
   
   
