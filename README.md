@@ -27,6 +27,11 @@ params as simpleCSVdata. Access through
   params.permit(SimpleCSVdata: [:first_name, :last_name, :phone_number])
 </code>
 
+The ajax response events will bubble through $("#submit-simple-csv") i.e.
+<code>
+  $(document).on('ajaxSuccess', "#submit-simple-csv", function(){ })
+</cod>
+
 ##( Slightly ) Advanced Usage
 If your data contains associated records, the helper takes a third argument
 <code>

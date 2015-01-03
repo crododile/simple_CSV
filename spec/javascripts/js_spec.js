@@ -75,6 +75,7 @@ describe("SimpleCSV", function() {
         }]
     )
   })
+  
   it("rejects invalid columns ( this is run before submitting ajax request )",
      function(){
         SimpleCSV.set_dobj(testDobj);

@@ -65,6 +65,7 @@ $(function(){
         url: url,
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(data),
+        context: $("#submit-simple-csv"),
         dataType: "json"
       })
     },
