@@ -66,7 +66,10 @@ $(function(){
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(data),
         context: $("#submit-simple-csv"),
-        dataType: "json"
+        dataType: "json",
+        success: function(){
+          alert('upload succesful')
+        }
       })
     },
     
