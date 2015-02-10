@@ -67,8 +67,9 @@ $(function(){
         data: JSON.stringify(data),
         context: $("#submit-simple-csv"),
         dataType: "json",
-        success: function(){
-          alert('upload succesful')
+        success: function(response){
+          console.log(response)
+          alert(response)
         }
       })
     },
