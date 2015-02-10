@@ -15,6 +15,7 @@ module SimpleCsvHelper
     </div>
     <button id='submit-simple-csv' data-url='#{path}'>SUBMIT</button>
     <input id='file-selector-simple-csv' type="file" id="files" name="files[]" multiple />
+    <div id="spinner"></div>
     <table id='receiver'></table>
     </div>
     THERE

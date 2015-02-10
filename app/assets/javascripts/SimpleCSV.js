@@ -60,6 +60,7 @@ $(function(){
     
     submit: function(url, action){
       var data = { simpleCSVdata: this.reject_invalid_columns(this.dobj()) }
+      $('#spinner').show()
       $.ajax({
         type: action,
         url: url,
@@ -70,6 +71,7 @@ $(function(){
         complete: function(response){
           console.log(response)
           alert(response.responseText)
+          $('#spinner').hide()
         }
       })
     },

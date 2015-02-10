@@ -7,6 +7,13 @@ div#simple-csv-container{
     margin: 5px;
     padding: 5px;
   }
+  
+  #spinner{
+      display: none;
+      height: 34px;
+      width: 34px;
+      background: image-url('spinner.gif') no-repeat center center;
+  }
 
   #file-selector-simple-csv{
     display: inline-block;
