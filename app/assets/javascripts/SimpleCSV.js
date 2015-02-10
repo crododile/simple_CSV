@@ -67,9 +67,9 @@ $(function(){
         data: JSON.stringify(data),
         context: $("#submit-simple-csv"),
         dataType: "json",
-        success: function(response){
+        complete: function(response){
           console.log(response)
-          alert(response)
+          alert(response.responseText)
         }
       })
     },
