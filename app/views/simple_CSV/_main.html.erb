@@ -1,19 +1,23 @@
 <div id='simple-csv-container'>
   <div id="valid_columns_bank">
     <div class="peritted-columns">
-      <h5>Individual Columns</h5>
-      <% permitted_columns.each do |col| %>
+      <% unless permitted_columns.empty? %>
+        <h5>Individual Columns</h5>
+        <% permitted_columns.each do |col| %>
         <p draggable='true' class='permitted-col' data-attr='<%= col %>'>
           <%= col %>
         </p>
-      <% end %>
+        <% end %>
+      <% end %>      
     </div>
     <div class="collection-columns">
-      <h5>Collection Columns</h5>
-      <% collection_columns.each do |col| %>
+      <% unless collection_columns.empty? %>
+        <h5>Collection Columns</h5>
+        <% collection_columns.each do |col| %>
         <p draggable='true' class='collection-col' data-collection='true' data-attr='<%= col %>'>
           <%= col %>
         </p>
+        <% end %>
       <% end %>
     </div>
   </div>
