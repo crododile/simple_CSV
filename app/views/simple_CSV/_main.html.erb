@@ -1,0 +1,31 @@
+<div id='simple-csv-container'>
+  <div id="valid_columns_bank">
+    <div class="peritted-columns">
+      <h5>Individual Columns</h5>
+      <% permitted_columns.each do |col| %>
+        <p draggable='true' class='permitted-col' data-attr='<%= col %>'>
+          <%= col %>
+        </p>
+      <% end %>
+    </div>
+    <div class="collection-columns">
+      <h5>Collection Columns</h5>
+      <% collection_columns.each do |col| %>
+        <p draggable='true' class='collection-col' data-collection='true' data-attr='<%= col %>'>
+          <%= col %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <form>
+    <div class="form-group">
+      <label for="file_selector_simple_csv">Import File:</label>
+      <input type="file" id="file_selector_simple_csv" name="files[]">
+    </div>
+    <button id='submit-simple-csv' data-url='<%= path %>' class='btn btn-primary'>SUBMIT</button>
+  </form>
+  
+  <div id="spinner"></div>
+  <table id='receiver' class="table table-bordered"></table>
+</div>

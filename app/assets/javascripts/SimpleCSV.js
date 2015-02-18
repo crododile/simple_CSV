@@ -4,7 +4,7 @@ $(function(){
     set_valid_columns: function(){
       var pc = this._pc = []
       $('.permitted-col').each(function(i, node){
-        pc.push($(node).text())
+        pc.push($(node).data('attr'))
       })
       //will add collection columns when they are dragged in
     },

@@ -15,14 +15,14 @@ $(function(){
   function handleFileSelect(evt) {
     var files = evt.target.files;
     var reader = new FileReader();
-    
+
     reader.onload = function(e){
       dstr = e.target.result;
       dobj = d3.csv.parse(dstr);
       
       SimpleCSV.set_dobj( dobj );
       
-      rcv = d3.select('#receiver')
+      rcv = d3.select('#receiver');
       rcv.selectAll('th').data(Object.keys(SimpleCSV.dobj()[0]))
         .enter()
         .append('th')
@@ -42,8 +42,8 @@ $(function(){
          .each( dataToTable )
     }
     //reader.onload called when reading completed
-    reader.readAsText(files[0])
+    reader.readAsText(files[0]);
   }
 
-  $('#file-selector-simple-csv').on('change', handleFileSelect);
+  $('#file_selector_simple_csv').on('change', handleFileSelect);
 });

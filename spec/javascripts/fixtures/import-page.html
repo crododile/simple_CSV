@@ -1,15 +1,31 @@
 <body>
-
-<p id="notice"></p>
-    <div id="simple-csv-container">
+  <p id="notice"></p>
+  <div id="simple-csv-container">
     <div id="valid_columns_bank">
-<p draggable="true" class="permitted-col">first_name</p><p draggable="true" class="permitted-col">last_name</p><p draggable="true" class="collection-col" data-collection="true">pets</p><p draggable="true" class="collection-col" data-collection="true">fish</p>    </div>
-    <button id="submit-simple-csv" data-url="http://localhost:3000/posts/import">SUBMIT</button>
-    <input id="file-selector-simple-csv" type="file" name="files[]" multiple="">
-    <table id="receiver"><th>fname</th><th> lname</th><th> dog</th><th> cat</th><tr id="csv-0"><td>bill</td><td> billson</td><td> blaze</td><td> gizmo</td></tr><tr id="csv-1"><td>test</td><td> testerson</td><td> airbud</td><td> gixmo</td></tr></table>
+      <p draggable="true" class="permitted-col" data-attr="first_name">first_name</p>
+      <p draggable="true" class="permitted-col" data-attr="last_name">last_name</p>
+      <p draggable="true" class="collection-col" data-collection="true" data-attr="pets">pets</p>
+      <p draggable="true" class="collection-col" data-collection="true" data-attr="fish">fish</p>    
     </div>
-
-
-
-
+    <button id="submit-simple-csv" data-url="http://localhost:3000/posts/import">SUBMIT</button>
+    <input id="file_selector_simple_csv" type="file" name="files[]">
+    <table id="receiver">
+    <th>fname</th>
+    <th> lname</th>
+    <th> dog</th>
+    <th> cat</th>
+      <tr id="csv-0">
+        <td>bill</td>
+        <td> billson</td>
+        <td> blaze</td>
+        <td> gizmo</td>
+      </tr>
+      <tr id="csv-1">
+        <td>test</td>
+        <td> testerson</td>
+        <td> airbud</td>
+        <td> gixmo</td>
+      </tr>
+    </table>
+  </div>
 </body>
